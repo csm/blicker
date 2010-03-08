@@ -2,6 +2,14 @@
 
 # icalfetcher.py: fetch an iCalendar file, turn it into a JSON file.
 # Copyright (C) 2010 Casey Marshall.
+#
+# Permission to use, copy, modify, distribute, and sell this software and its
+# documentation for any purpose is hereby granted without fee, provided that
+# the above copyright notice appear in all copies and that both that
+# copyright notice and this permission notice appear in supporting
+# documentation.  No representations are made about the suitability of this
+# software for any purpose.  It is provided "as is" without express or 
+# implied warranty.
 
 import sys
 import json
@@ -41,7 +49,7 @@ def main(argv):
 	else:
 		outfile = u.netloc + ".json"
 	req = urllib2.urlopen(url)
-	ical = ''.join(req.readlines())
+	ical = req.read()
 	cal = icalendar.Calendar.from_string(ical)
 	d = cal2dict(cal)
 	d['source'] = url
