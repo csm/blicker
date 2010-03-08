@@ -2,7 +2,9 @@
 
 ## What is this?
 
-This is an attempt to make a "screen scraper," or aggregator, of various sources of concert information in the greater San Francisco area. The idea is that we make a bunch of "fetchers," which might just grab an iCal feed from a venue's web site, or it might have to parse the HTML to figure out 
+This is an attempt to make a "screen scraper," or aggregator, of various sources of concert information in the greater San Francisco area. The idea is that we make a bunch of "fetchers," which might just grab an iCal feed from a venue's web site, or it might have to parse the HTML to figure out what's coming up on each venue's calendar.
+
+What each fetcher does is turn the content into a common format: a JSON dictionary. These files will then be used an HTML document to render these all in one place.
 
 ## Copyright
 
@@ -15,3 +17,7 @@ copyright notice and this permission notice appear in supporting
 documentation.  No representations are made about the suitability of this
 software for any purpose.  It is provided "as is" without express or 
 implied warranty.
+
+## "blicker?"
+
+I needed a name, and came up with that on the spot. I like to think if the process of fetching an HTML page, parsing it, and figuring out the contents as "blicking," because it's a weird thing to do and needs a weird name.
